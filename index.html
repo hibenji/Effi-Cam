@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Effi Cam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="https://bench.benji.link/assets/bulma-prefers-dark.css" />
+
+    <script>
+        function torch() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "torch.php", true);
+        xhttp.send();
+        check();
+      }
+    </script>
+
+    <style>
+      .center{
+        display: grid;
+        place-items: center;
+      }
+
+      img.rounded-corners {
+        border-radius: 30px;
+      }
+
+      .crop{
+        width: 95%;
+        height: 95%;
+        object-fit: contain;"
+      }
+
+
+    </style>
+
+
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Effi Cam
+      </h1>
+      <p class="subtitle">
+        The Effi <strong>Cams!</strong>
+      </p>
+
+
+      <div class="columns center">
+        <div class="column">
+          <!-- img -->
+          <figure class="image is-16by9">
+            <img class="rounded-corners" src="https://cam_api.effi.xyz/cat1.jpg">
+          </figure>
+
+        </div>
+        <div class="column less">
+          
+          <!-- img -->
+          <figure class="image">
+            <img class="rounded-corners crop" src="https://cam_api.effi.xyz/cat2.jpg">
+          </figure>
+          
+        </div>
+      </div>
+
+      <!-- button to turn on lights -->
+      <div class="center">
+          <button class="button is-primary" onclick="torch()">
+            Turn on lights
+          </button>
+          <small>(For 5 seconds)</small>
+      </div>  
+
+
+    </div>
+  </section>
+  </body>
+</html>
